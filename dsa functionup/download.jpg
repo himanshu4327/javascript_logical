@@ -1,0 +1,340 @@
+// const arr = [1, 16, 35, 5, 9];
+// const newEle = 61;
+// const position = 1;
+
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   if (i >= position) {
+//     arr[i + 1] = arr[i];
+
+//     if (i == position) {
+//       arr[i] = newEle;
+//     }
+//   }
+// }
+// console.log(arr);
+
+//=================================
+
+// let arr=[1, 16, 35, 5, 9]
+// // arr=>arr.map(arr=arr*2)
+// // return arr
+
+// console.log(arr.map(function arr(mohit){
+//   // mohit = arr*2
+
+//   return mohit * 2
+// }))
+
+//////ensertion===============
+
+// let array=[9, 12, 45, 56, 76, 87]
+// let newEl=34
+// let position = 2
+// for(let i=array.length-1;i>=0;i--){
+//   if(i>=position){
+//     array[i+1]=array[i]
+//     if(i===position){
+//       array[i]=newEl
+//   }
+//   }
+
+// }
+// console.log(array)
+
+//========deletion=========
+
+// let array =[12,23,34,45,67,78]
+// let position = 2
+// for(let i=position;i<array.length-1;i++){
+//    array[i]=array[i+1]
+// }
+// array.length=array.length-1
+
+// console.log(array)
+//array.splice(2,1)
+
+//======search=======
+// let array =[12,23,34,45,67,78]
+// let item=67
+// let index=undefined
+// for(let i=0;i<array.length;i++){
+//   if(item==array[i]){
+//     index=i
+//     break;
+//   }
+// }
+// console.log(index)
+
+// =======merge array==========
+// let array1=[11,22,43,54,36,54,76,58]
+// let array2=[1,2,2,3,4,456]
+// let array=[]
+// for(let i=0;i<array1.length;i++){
+//   array[i]=array1[i]
+// }
+// for(let j=0;j<array2.length;j++){
+//   array[array1.length +j] =array2[j]
+// }
+// console.log(array.sort(a,b =>{return a-b}))
+
+//array=(...arrray1,...array2)
+
+//=============merging 2 shorted array==========
+// let arr1=[2,5,12,18,20]
+// let arr2=[7,9,11,15,25,28,30,35]
+// function merge(arr1,arr2){
+//  let arr=[]
+//  let i=0,j=0,k=0
+//  while(i<arr1.length && j<arr2.length){
+//   if(arr1[i]<arr2[j]){
+//    arr[k]=arr1[i]
+//    i++
+//    k++
+//   }else{
+//    arr[k]=arr2[j]
+//    j++
+//    k++  
+//   }
+//  }
+//   while (arr1.length>i) {
+//    arr[k]=arr1[i]
+//    i++
+//    k++
+//   }
+//   while(arr2.length>j){
+//    arr[k]=arr2[j]
+//    j++
+//    k++
+//   }
+
+//  return arr
+// }
+// console.log(merge(arr1,arr2))
+
+
+//====merge two unsorted into one sorted array=====
+
+// Merge function from earlier
+// function merge(arr1, arr2) {
+//     let results = [];
+//     let i = 0;k=0
+//     let j = 0;
+//     while (i < arr1.length && j < arr2.length) {
+//         if (arr2[j] > arr1[i]) {
+//             results[k]=arr1[i]
+//             i++;
+//             k++
+//         } else {
+//             results[k]=arr2[j]
+//             j++;
+//             k++
+//         }
+//     }
+//     while (i < arr1.length) {
+//         results[k]=arr1[i]
+//         i++;
+//         k++
+//     }
+//     while (j < arr2.length) {
+//         results[k]=arr2[j]
+//         j++;
+//         k++
+//     }
+//     return results;
+// }0
+
+// // Recrusive Merge Sort
+// function mergeSort(arr) {
+//     if (arr.length <= 1) return arr;
+//     let mid = Math.floor(arr.length / 2);
+//     let left = mergeSort(arr.slice(0, mid));
+//     let right = mergeSort(arr.slice(mid));
+//     return merge(left, right);
+// }
+// // let x = mergeSort([3, 9, 7, 8, 60,40, 90, 36, 21, 16])
+// // console.log(x)
+// // console.log(merge())
+
+// console.log(mergeSort(merge([3, 9, 7, 8, 60, 40], [90, 36, 21, 16])))
+
+
+
+//=======================
+// function bubbleSort(arr){
+// for(let i=0;i<=arr.length-1;i++){
+//   for(let j=0;j<=arr.length-i-1;j++){
+//     if(arr[j] > arr[j + 1]){
+//       [arr[j],arr[j+1]]= [arr[j+1],arr[j]]
+//     }
+//   }
+// }
+// return arr
+// }
+// console.log([1,2,3,4,55,23,34,443,334,32,34,33])
+
+//==================================
+
+// function bubbleSort(arr){
+//    let swapped
+//    for(let i=0;i<arr.length;i++){
+//     swapped = false;
+//     for(let j=1;j<arr.length-i;j++){
+//         if(arr[j]<arr[j-1]){
+//             let temp=arr[j]
+//             arr[j]=arr[j-1]
+//             arr[j-1]=temp
+//             swapped=true
+//         }
+//     }
+//     if(swapped==false){
+//     break;
+//     }
+//    }
+
+// }
+// console.log([3,5,1,4,2])
+
+//============================================
+// function bubbleSort(arr){
+//     // var i, j, temp;
+//     let n = arr.length
+//     let swapped;
+//     for (let i = 0; i < n - 1; i++) {
+//        swapped = false;
+//         for (let j = 0; j < n - i - 1; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 // swap arr[j] and arr[j+1]
+//                 temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 arr[j + 1] = temp;
+//                 swapped = true;
+//             }
+//         }
+//             // IF no two elements were 
+//             // swapped by inner loop, then break
+//         if (swapped == false)
+//             break;
+//     }
+//     return arr
+// }
+
+// console.log(bubbleSort([-3,-7,-9,1,0,34,2,1,8,9,6,7,3,4]))
+
+
+//============[Binary search]=================
+// let a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// //          0           4           8
+// function binary(a, key) {
+//     let left = 0    //====>0(index) //-not allowed    +allowed
+//     let right = a.length - 1  //=====>8(index) //-allowed    +not allowed
+//     let mid = Math.floor((left + right) / 2)
+//     while (right >= left) {    //8>=5
+//         if (a[mid] == key) {
+//             return 1
+//         } else if (a[mid] > key) {    //5>2
+//             right =mid-1
+//             mid=Math.floor((left+right)/2)
+//         }else{
+//             left=mid+1
+//             mid=Math.floor((left+right)/2)
+//         }
+//     }
+//     return -1
+// }
+// console.log(binary(a, 9))
+
+//======== sliding window==========
+// function sumSubArray(arr, k) {
+//     let maxSum = 0;
+//     let sum = 0;
+
+//     for (let i = 0; i < k; i++) {
+//       sum += arr[i];
+//       maxSum = Math.max(maxSum, sum);
+//     }
+//     for (let i = k; i < arr.length; i++) {
+//       sum = sum + arr[i] - arr[i - k];
+//       maxSum = Math.max(maxSum, sum);
+//     }
+//     return maxSum;
+//   }
+
+//   console.log(sumSubArray([100, 200, 300, 400], 2));
+
+//===========reverse====pending=======
+// let arr=[1,2,3,4,5,6,7,8,9]
+// function reverse(arr){
+// //     // let arr2=[]
+// for(let i=arr.length-1;i>=0;i--){
+//     console.log(arr[i])     //1
+// //     // arr2.push[arr[i]]        //2
+
+// }
+// // // arr.map((value)=>arr2.unshift(value))   //3
+// // // var arr2=arr.map((value,i)=>arr[arr.length-i-1])    //4
+// }
+// reverse(arr)
+
+//=====object======
+// let data = {
+//     name: 'anil',
+//     age: 28,
+//     mail: "abc@test.com",
+//     getName: function () {
+//         return this.name;
+//     }
+// }
+// data.contact = 12345;
+// data.name = "peter"
+
+// for(x in data){
+// console.log(data[x])
+// }
+
+// console.log(Object.keys(data))
+// console.log(Object.values(data))
+// console.log(Object.entries(data))
+
+//============MAP==========
+
+// let data = new Map([   /* //new Map([])*/
+//     ['name', 'Mohit'],
+//     [true, 'bool key'],
+//     [100, 'hundred']
+// ]);
+
+// data.set('color', 'green');
+// console.log(data)
+// // console.log(data.size)
+// // console.log(data.has(100))
+// // console.log(data.get(100))
+// // data.clear()
+// // console.log(data)
+
+// // for(x of data){
+// //     console.log(x)
+// // }
+// // data.forEach((val, key) => {
+// //     console.log(key, ":", val)
+// // })
+
+//========palindrome=======
+
+// function palindrome(data) {
+//     let start = 0;
+//     let end = data.length - 1;
+//     let result = true;
+//     while (end > start) {
+//       if (data[start] != data[end]) {
+//         result = false;
+//       }
+//       start++;
+//       end--;
+//     }
+//     return result;
+//   }
+
+//   let data = "level"
+//   console.log(palindrome(data))
+
+//=========
